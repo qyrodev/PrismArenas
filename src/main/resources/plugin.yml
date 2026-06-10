@@ -1,0 +1,42 @@
+name: PrismArenas
+version: '1.0.0'
+main: me.qyro.prismarenas.PrismArenas
+api-version: '1.21'
+author: Qyro
+description: Advanced arena restoration plugin for Paper
+
+commands:
+  parenas:
+    description: Main PrismArenas command
+    usage: /parenas <wand|create|delete|edit|regen|reload> [arena]
+    aliases: [prismarenas, pa]
+
+permissions:
+  prismarenas.wand:
+    description: Receive the PrismWand selection tool
+    default: op
+  prismarenas.create:
+    description: Create new arenas
+    default: op
+  prismarenas.delete:
+    description: Delete arenas
+    default: op
+  prismarenas.edit:
+    description: Open arena edit GUI
+    default: op
+  prismarenas.regen:
+    description: Regenerate arenas
+    default: op
+  prismarenas.reload:
+    description: Reload plugin configuration
+    default: op
+  prismarenas.admin:
+    description: Full PrismArenas access
+    default: op
+    children:
+      prismarenas.wand: true
+      prismarenas.create: true
+      prismarenas.delete: true
+      prismarenas.edit: true
+      prismarenas.regen: true
+      prismarenas.reload: true

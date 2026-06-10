@@ -1,0 +1,112 @@
+# ======================================================
+# PrismArenas Configuration
+# Author: Qyro
+# Version: 1.0.0
+# ======================================================
+
+settings:
+  # Enable debug logging
+  debug: false
+  # Save all arena data automatically
+  auto-save-minutes: 5
+  # Default interval when creating an arena
+  default-reset-interval: 300
+  # Minimum interval allowed in GUI
+  minimum-reset-interval: 60
+  # Maximum interval allowed in GUI
+  maximum-reset-interval: 86400
+  # Save data on plugin disable
+  save-on-disable: true
+  # Automatically load all arenas on startup
+  load-arenas-on-startup: true
+
+# ======================================================
+# Restoration Engine
+# ======================================================
+restoration:
+  # Only restore blocks that changed
+  changed-blocks-only: true
+  # Preload chunks before regeneration
+  preload-chunks: true
+  # Process blocks in batches
+  batch-processing: true
+  # Blocks restored per tick
+  process-per-tick: 1000
+  # Maximum allowed batch size
+  max-process-per-tick: 5000
+  # Run arena comparison async
+  async-comparison: true
+  # Log restoration statistics
+  log-restoration-stats: true
+
+# ======================================================
+# Performance
+# ======================================================
+performance:
+  # Cache arena data
+  cache-arenas: true
+  # Cache snapshots in memory
+  cache-snapshots: true
+  # Auto unload inactive snapshots
+  unload-unused-snapshots: true
+  # Minutes before cache unload
+  cache-expire-minutes: 15
+
+# ======================================================
+# Storage
+# ======================================================
+database:
+  # SQLITE or MYSQL
+  type: SQLITE
+  sqlite:
+    file: database.db
+  mysql:
+    host: localhost
+    port: 3306
+    database: prismarenas
+    username: root
+    password: password
+    use-ssl: false
+    connection-pool-size: 10
+
+# ======================================================
+# Snapshot Storage
+# ======================================================
+snapshots:
+  # Folder location
+  directory: snapshots
+  # Compress snapshots
+  compression: true
+  # Compression level (1-9)
+  compression-level: 6
+  # Save snapshots async
+  async-saving: true
+
+# ======================================================
+# Sounds
+# ======================================================
+sounds:
+  enabled: true
+  selection: ENTITY_EXPERIENCE_ORB_PICKUP
+  gui-open: BLOCK_ENDER_CHEST_OPEN
+  interval-increase: ENTITY_PLAYER_LEVELUP
+  interval-decrease: BLOCK_NOTE_BLOCK_BASS
+  toggle-enable: ENTITY_VILLAGER_YES
+  toggle-disable: ENTITY_VILLAGER_NO
+  arena-regenerated: ENTITY_PLAYER_LEVELUP
+
+# ======================================================
+# Startup
+# ======================================================
+startup:
+  show-banner: true
+  show-loaded-arenas: true
+  show-active-tasks: true
+
+# ======================================================
+# Developer Settings
+# ======================================================
+developer:
+  timings: false
+  verbose-storage: false
+  verbose-restoration: false

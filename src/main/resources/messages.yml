@@ -1,0 +1,84 @@
+format: auto
+
+prefix: "<aqua><bold>PRISMARENAS <dark_gray>- <white>"
+
+general:
+  no-permission: "<red>You do not have permission to use this command."
+  player-only: "<red>This command can only be used by players."
+  reload-success: "<green>Configuration reloaded successfully."
+  reload-failed: "<red>Failed to reload configuration."
+
+command:
+  usage-header: "<white>Usage:"
+  usage-wand: "<aqua>/parenas wand <gray>- Receive the PrismWand"
+  usage-create: "<aqua>/parenas create <arena> <gray>- Create an arena"
+  usage-delete: "<aqua>/parenas delete <arena> <gray>- Delete an arena"
+  usage-edit: "<aqua>/parenas edit <arena> <gray>- Open edit GUI"
+  usage-regen: "<aqua>/parenas regen <arena> <gray>- Regenerate an arena"
+  usage-reload: "<aqua>/parenas reload <gray>- Reload configuration"
+
+wand:
+  received: "<green>You received the <white>PrismWand<green>."
+  position-1: "<green>Position 1 set."
+  position-2: "<green>Position 2 set."
+
+arena:
+  create:
+    usage: "<red>Usage: /parenas create <arena>"
+    scanning: "<yellow>Scanning region and creating arena <white>{arena}<yellow>..."
+    success: "<green>Arena <white>{arena} <green>has been created. Auto regeneration started."
+    failed: "<red>Failed to create arena. Ensure the region is valid and chunks are loaded."
+    exists: "<red>An arena with that name already exists."
+    invalid-name: "<red>Arena name may only contain letters, numbers, underscores, and hyphens."
+    empty-name: "<red>Arena name cannot be empty."
+    no-selection: "<red>You must select both positions using the PrismWand first."
+  delete:
+    usage: "<red>Usage: /parenas delete <arena>"
+    success: "<green>Arena <white>{arena} <green>has been deleted."
+    not-found: "<red>Arena <white>{arena} <red>does not exist."
+  edit:
+    usage: "<red>Usage: /parenas edit <arena>"
+    not-found: "<red>Arena <white>{arena} <red>does not exist."
+  regen:
+    usage: "<red>Usage: /parenas regen <arena>"
+    started: "<green>Regeneration started for arena <white>{arena}<green>."
+    failed: "<red>Failed to start regeneration for arena <white>{arena}<red>."
+    not-found: "<red>Arena <white>{arena} <red>does not exist."
+    scanning: "<red>Arena <white>{arena} <red>is still being scanned."
+    already-running: "<red>Arena <white>{arena} <red>is already regenerating."
+    max-concurrent: "<red>Maximum concurrent regenerations reached. Try again later."
+
+gui:
+  arena-not-found: "<red>That arena no longer exists."
+  interval-set: "<green>Interval set to <white>{interval}s<green>."
+  auto-regen-enabled: "<green>AutoRegen enabled for <white>{arena}<green>."
+  auto-regen-disabled: "<red>AutoRegen disabled for <white>{arena}<red>."
+
+console:
+  regen-complete-header: "================================================"
+  regen-complete-title: "Arena Regeneration Complete"
+  regen-complete-arena: "Arena: {arena}"
+  regen-complete-changed: "Blocks Changed: {changed}"
+  regen-complete-restored: "Blocks Restored: {restored}"
+  regen-complete-duration: "Duration: {duration}ms"
+  regen-complete-automatic: "Automatic: {automatic}"
+  regen-complete-footer: "================================================"
+  startup-header: "================================================"
+  startup-title: "PrismArenas v{version}"
+  startup-subtitle: "Advanced Arena Restoration"
+  startup-author: "Author: Qyro"
+  startup-platform: "Platform: Paper 1.21+"
+  startup-status: "Status: Enabled"
+  startup-arenas: "Loaded Arenas: {arenas}"
+  startup-tasks: "Active Tasks: {tasks}"
+  startup-engine-header: "Restoration Engine:"
+  startup-engine-snapshot: "✓ Snapshot Based"
+  startup-engine-changed: "✓ Changed Blocks Only"
+  startup-engine-async: "✓ Async Processing"
+  startup-engine-batched: "✓ Batched Restoration"
+  startup-ready: "# PrismArenas is ready."
+  startup-footer: "================================================"
+  disabled: "PrismArenas disabled."
+  missing-snapshot: "Missing snapshot for arena: {arena}"
+  regen-no-snapshot: "Cannot regenerate arena '{arena}': snapshot not loaded."
+  regen-no-world: "Cannot regenerate arena '{arena}': world not loaded."
